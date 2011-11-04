@@ -13,7 +13,6 @@ group :development do
 	gem 'rspec-rails', '2.6.1.beta1'
 	gem 'sqlite3'
 	gem 'annotate', '2.4.0'
-	gem 'faker', '1.0.1'
 end
 
 group :test do
