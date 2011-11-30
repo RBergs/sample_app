@@ -20,7 +20,7 @@ describe PagesController do
       end
     
       it "should have the right title" do
-        response.should have_selector("title", :content => "#{base_title} | Home")
+        response.should have_selector("title", :content => "#{@base_title} | Home")
       end
     end
     
@@ -34,8 +34,8 @@ describe PagesController do
       
       it "should have the right follower/following counts" do
         get :home
-        response.should have_selector("a", :href => following_user_path(@user), :content => "O following")
-        response.should have_selector("a", :href => followers_user_path(@user), :content => "1 follower")
+        response.should have_selector('a', :href => following_user_path(@user), :content => "0 following")
+        response.should have_selector('a', :href => followers_user_path(@user), :content => "1 follower")
       end
     end
   end
